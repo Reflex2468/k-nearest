@@ -5,6 +5,7 @@ namespace Reflex\Tests\Feature;
 
 
 use Orchestra\Testbench\TestCase;
+use Reflex\Neighbors\Distances\Chebyshev;
 use Reflex\Neighbors\Distances\Euclidean;
 use Reflex\Neighbors\Distances\Manhattan;
 
@@ -29,6 +30,16 @@ class DistancesTest extends TestCase
         $manhattan = new Manhattan();
         $this->assertEquals(3, $manhattan->distance([4, 6], [2, 5]));
         $this->assertEquals(9, $manhattan->distance([2, 6, 5, 8], [4, 9, 1, 8]));
+    }
+
+    /**
+     * @test
+     */
+    public function test_chebyshev_distance()
+    {
+        $chebyshev = new Chebyshev();
+        $this->assertEquals(2, $chebyshev->distance([4, 6], [2, 5]));
+        $this->assertEquals(7, $chebyshev->distance([1, 9, 8, 2, 5], [6, 4, 1, 3, 12]));
     }
 
 }
