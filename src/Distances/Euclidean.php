@@ -9,8 +9,8 @@ class Euclidean extends Distance
     {
         $sum = 0;
         for ($i = 0; $i < count($a); $i++) {
-            $sum += pow($a[$i], 2) + pow($b[$i], 2);
+            $sum += pow($a[$i] - $b[$i], 2);
         }
-        return $sum;
+        return sqrt($sum);
     }
 }
