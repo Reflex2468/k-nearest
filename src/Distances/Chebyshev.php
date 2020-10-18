@@ -8,6 +8,11 @@ class Chebyshev extends Distance
 {
     public function handle(array $a, array $b): float
     {
-        // TODO: Implement handle() method.
+        $sums = collect();
+        for ($i = 0; $i < count($a); $i++) {
+            $sum = abs($a[$i] - $b[$i]);
+            $sums->push($sum);
+        }
+        return $sums->max();
     }
 }
