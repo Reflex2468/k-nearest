@@ -15,17 +15,13 @@ abstract class Distance
             throw new \LengthException("Lengths in distance calculate function do not match.");
         }
 
-        $sum = 0;
-        for ($i = 0; $i < count($a); $i++) {
-            $sum += $this->handle($a[$i], $b[$i]);
-        }
-        return $sum;
+        return $this->handle($a, $b);
     }
 
     /**
-     * @param float $a
-     * @param float $b
-     * @return double
+     * @param float[] $a
+     * @param float[] $b
+     * @return float
      */
-    abstract public function handle(float $a, float $b): float;
+    abstract public function handle(array $a, array $b): float;
 }

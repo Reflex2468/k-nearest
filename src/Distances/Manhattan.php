@@ -6,8 +6,12 @@ namespace Reflex\Neighbors\Distances;
 
 class Manhattan extends Distance
 {
-    public function handle(float $a, $b): float
+    public function handle(array $a, array $b): float
     {
-        return $a-$b;
+        $sum = 0;
+        for ($i = 0; $i < count($a); $i++) {
+            $sum += $a[$i] - $b[$i];
+        }
+        return $sum;
     }
 }
