@@ -7,7 +7,9 @@
             "email": "xavier.coppens@digitalmove.be"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.3"
+    },
     "require-dev": {
         "orchestra/testbench": "^6.2"
     },
