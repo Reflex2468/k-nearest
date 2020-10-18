@@ -10,7 +10,7 @@ class Manhattan extends Distance
     {
         $sum = 0;
         for ($i = 0; $i < count($a); $i++) {
-            $sum += $a[$i] - $b[$i];
+            $sum += abs($a[$i] - $b[$i]);
         }
         return $sum;
     }

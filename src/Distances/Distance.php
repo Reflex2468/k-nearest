@@ -10,7 +10,7 @@ abstract class Distance
      * @param float[] $b
      * @return float
      */
-    public function calculate(array $a, array $b): float {
+    public function distance(array $a, array $b): float {
         if (count($a) !== count($b)) {
             throw new \LengthException("Lengths in distance calculate function do not match.");
         }
