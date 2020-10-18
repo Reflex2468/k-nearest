@@ -1,0 +1,24 @@
+{
+    "name": "digitalmove/k-nearest",
+    "description": "A K-Nearest Neighbors implementation for laravel",
+    "authors": [
+        {
+            "name": "Reflex2468",
+            "email": "xavier.coppens@digitalmove.be"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reflex\\Neighbors\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Reflex\\Neighbos\\Tests\\": "tests/"
+        }
+    }
+}
