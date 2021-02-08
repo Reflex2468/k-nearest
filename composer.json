@@ -23,4 +23,5 @@
             "Reflex\\Tests\\": "tests/"
         }
     }
+    "license": "MIT"
 }
